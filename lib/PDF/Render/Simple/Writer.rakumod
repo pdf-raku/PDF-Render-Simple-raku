@@ -711,7 +711,7 @@ method !finish-code {
 }
 
 method !code(@contents is copy) {
-    use PDF::COS:::Name;
+    use PDF::COS::Name;
     sub prefix:</>($s) { PDF::COS::Name.COERCE($s) };
 
     @contents.pop if @contents.tail ~~ "\n";
@@ -778,14 +778,14 @@ method !link(PDF::Content::Text::Box $tb, :$tab = $!margin-left, ) {
         my @rect = $!gfx.base-coords: $x0, $y, $x1, $y + $.line-height;
         @rect Z+= [-pad, -pad, pad, 0];
         my @Border = 0, 0, 0;
-        my Str $content = $tb.text;
+        my Str $contents = $tb.text;
 
         my PDF::Annot::Link $link = PDF::API6.annotation(
             :$!page,
             :action($.link),
             :@rect,
             :@Border,
-            :$content,
+            :$contents,
         );
 
         $y -= .height * $tb.leading;
