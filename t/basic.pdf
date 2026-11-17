@@ -8,7 +8,7 @@
   /MarkInfo << /Marked true >>
   /Outlines 14 0 R
   /Pages 9 0 R
-  /StructTreeRoot 39 0 R
+  /StructTreeRoot 36 0 R
 >>
 endobj
 
@@ -288,168 +288,136 @@ endobj
 endobj
 
 14 0 obj
-<< /Type /Outlines /Count 4 /First 15 0 R /Last 16 0 R >>
+<< /Type /Outlines /Count 1 /First 15 0 R /Last 15 0 R >>
 endobj
 
 15 0 obj
 <<
   /Dest /A_basic_Test_Document
-  /Next 16 0 R
   /Parent 14 0 R
-  /SE 23 0 R
+  /SE 16 0 R
   /Title (A basic Test Document)
 >>
 endobj
 
 16 0 obj
 <<
-  /Count 2
-  /First 17 0 R
-  /Last 18 0 R
-  /Parent 14 0 R
-  /Prev 15 0 R
-  /Title (Index)
->>
-endobj
-
-17 0 obj
-<<
-  /Dest /on_demand
-  /Next 18 0 R
-  /Parent 16 0 R
-  /SE 21 0 R
-  /Title (on demand)
->>
-endobj
-
-18 0 obj
-<<
-  /Dest /Supply.interval
-  /Parent 16 0 R
-  /Prev 17 0 R
-  /SE 19 0 R
-  /Title (Supply.interval)
->>
-endobj
-
-19 0 obj
-<< /Type /StructElem /S /Code /K [ 21 ] /P 20 0 R >>
-endobj
-
-20 0 obj
-<<
-  /Type /StructElem
-  /S /P
-  /K [ 17 21 0 R 19 20 19 0 R 22 23 ]
-  /P 22 0 R
-  /Pg 3 0 R
->>
-endobj
-
-21 0 obj
-<< /Type /StructElem /S /Code /K [ 18 ] /P 20 0 R >>
-endobj
-
-22 0 obj
-<<
-  /Type /StructElem
-  /S /Document
-  /K [ 23 0 R 25 0 R 28 0 R 30 0 R 32 0 R 33 0 R 36 0 R 20 0 R ]
-  /Lang (en)
-  /P 39 0 R
->>
-endobj
-
-23 0 obj
-<<
   /Type /StructElem
   /S /H1
-  /K [ 24 0 R 0 ]
-  /P 22 0 R
+  /K [ 17 0 R 0 ]
+  /P 18 0 R
   /Pg 3 0 R
   /T (A basic Test Document)
 >>
 endobj
 
-24 0 obj
-<< /Type /StructElem /S /Artifact /P 23 0 R >>
+17 0 obj
+<< /Type /StructElem /S /Artifact /P 16 0 R >>
 endobj
 
-25 0 obj
-<< /Type /StructElem /S /P /K [ 1 26 0 R 3 ] /P 22 0 R /Pg 3 0 R >>
+18 0 obj
+<<
+  /Type /StructElem
+  /S /Document
+  /K [ 16 0 R 19 0 R 22 0 R 24 0 R 26 0 R 27 0 R 30 0 R 33 0 R ]
+  /Lang (en)
+  /P 36 0 R
+>>
 endobj
 
-26 0 obj
+19 0 obj
+<< /Type /StructElem /S /P /K [ 1 20 0 R 3 ] /P 18 0 R /Pg 3 0 R >>
+endobj
+
+20 0 obj
 <<
   /Type /StructElem
   /S /U
   /A << /TextDecorationType /Underline /O /Layout >>
-  /K [ 27 0 R 2 ]
-  /P 25 0 R
+  /K [ 21 0 R 2 ]
+  /P 19 0 R
 >>
 endobj
 
+21 0 obj
+<< /Type /StructElem /S /Artifact /P 20 0 R >>
+endobj
+
+22 0 obj
+<< /Type /StructElem /S /P /K [ 4 23 0 R 6 ] /P 18 0 R /Pg 3 0 R >>
+endobj
+
+23 0 obj
+<< /Type /StructElem /S /Em /K [ 5 ] /P 22 0 R >>
+endobj
+
+24 0 obj
+<< /Type /StructElem /S /P /K [ 7 25 0 R 9 ] /P 18 0 R /Pg 3 0 R >>
+endobj
+
+25 0 obj
+<< /Type /StructElem /S /Strong /K [ 8 ] /P 24 0 R >>
+endobj
+
+26 0 obj
+<< /Type /StructElem /S /P /K [ 10 ] /P 18 0 R /Pg 3 0 R >>
+endobj
+
 27 0 obj
-<< /Type /StructElem /S /Artifact /P 26 0 R >>
+<< /Type /StructElem /S /P /K [ 11 28 0 R 13 ] /P 18 0 R /Pg 3 0 R >>
 endobj
 
 28 0 obj
-<< /Type /StructElem /S /P /K [ 4 29 0 R 6 ] /P 22 0 R /Pg 3 0 R >>
+<< /Type /StructElem /S /Link /K [ 29 0 R 12 ] /P 27 0 R >>
 endobj
 
 29 0 obj
-<< /Type /StructElem /S /Em /K [ 5 ] /P 28 0 R >>
-endobj
-
-30 0 obj
-<< /Type /StructElem /S /P /K [ 7 31 0 R 9 ] /P 22 0 R /Pg 3 0 R >>
-endobj
-
-31 0 obj
-<< /Type /StructElem /S /Strong /K [ 8 ] /P 30 0 R >>
-endobj
-
-32 0 obj
-<< /Type /StructElem /S /P /K [ 10 ] /P 22 0 R /Pg 3 0 R >>
-endobj
-
-33 0 obj
-<< /Type /StructElem /S /P /K [ 11 34 0 R 13 ] /P 22 0 R /Pg 3 0 R >>
-endobj
-
-34 0 obj
-<< /Type /StructElem /S /Link /K [ 35 0 R 12 ] /P 33 0 R >>
-endobj
-
-35 0 obj
 << /Type /OBJR /Obj 4 0 R /Pg 3 0 R >>
 endobj
 
-36 0 obj
-<< /Type /StructElem /S /P /K [ 14 37 0 R 16 ] /P 22 0 R /Pg 3 0 R >>
+30 0 obj
+<< /Type /StructElem /S /P /K [ 14 31 0 R 16 ] /P 18 0 R /Pg 3 0 R >>
 endobj
 
-37 0 obj
-<< /Type /StructElem /S /Link /K [ 38 0 R 15 ] /P 36 0 R >>
+31 0 obj
+<< /Type /StructElem /S /Link /K [ 32 0 R 15 ] /P 30 0 R >>
 endobj
 
-38 0 obj
+32 0 obj
 << /Type /OBJR /Obj 6 0 R /Pg 3 0 R >>
 endobj
 
-39 0 obj
+33 0 obj
+<<
+  /Type /StructElem
+  /S /P
+  /K [ 17 34 0 R 19 20 35 0 R 22 23 ]
+  /P 18 0 R
+  /Pg 3 0 R
+>>
+endobj
+
+34 0 obj
+<< /Type /StructElem /S /Code /K [ 18 ] /P 33 0 R >>
+endobj
+
+35 0 obj
+<< /Type /StructElem /S /Code /K [ 21 ] /P 33 0 R >>
+endobj
+
+36 0 obj
 <<
   /Type /StructTreeRoot
-  /K [ 22 0 R ]
+  /K [ 18 0 R ]
   /ParentTree <<
-    /Nums [ 0 [ 23 0 R 25 0 R 26 0 R 25 0 R 28 0 R 29 0 R 28 0 R 30 0 R 31 0 R 30 0 R 32 0 R 33 0 R 34 0 R 33 0 R 36 0 R 37 0 R 36 0 R 20 0 R 21 0 R 20 0 R 20 0 R 19 0 R 20 0 R 20 0 R ] 1 34 0 R 2 37 0 R ]
+    /Nums [ 0 [ 16 0 R 19 0 R 20 0 R 19 0 R 22 0 R 23 0 R 22 0 R 24 0 R 25 0 R 24 0 R 26 0 R 27 0 R 28 0 R 27 0 R 30 0 R 31 0 R 30 0 R 33 0 R 34 0 R 33 0 R 33 0 R 35 0 R 33 0 R 33 0 R ] 1 28 0 R 2 31 0 R ]
   >>
   /RoleMap << /U /Span >>
 >>
 endobj
 
 xref
-0 40
+0 37
 0000000000 65535 f 
 0000000015 00000 n 
 0000000172 00000 n 
@@ -466,32 +434,29 @@ xref
 0000004464 00000 n 
 0000004569 00000 n 
 0000004644 00000 n 
-0000004776 00000 n 
-0000004890 00000 n 
-0000004998 00000 n 
-0000005118 00000 n 
-0000005188 00000 n 
-0000005301 00000 n 
-0000005371 00000 n 
-0000005519 00000 n 
-0000005642 00000 n 
-0000005706 00000 n 
-0000005791 00000 n 
-0000005925 00000 n 
-0000005989 00000 n 
-0000006074 00000 n 
-0000006141 00000 n 
-0000006226 00000 n 
-0000006297 00000 n 
-0000006374 00000 n 
-0000006461 00000 n 
-0000006538 00000 n 
-0000006594 00000 n 
-0000006681 00000 n 
-0000006758 00000 n 
-0000006814 00000 n 
+0000004761 00000 n 
+0000004884 00000 n 
+0000004948 00000 n 
+0000005096 00000 n 
+0000005181 00000 n 
+0000005315 00000 n 
+0000005379 00000 n 
+0000005464 00000 n 
+0000005531 00000 n 
+0000005616 00000 n 
+0000005687 00000 n 
+0000005764 00000 n 
+0000005851 00000 n 
+0000005928 00000 n 
+0000005984 00000 n 
+0000006071 00000 n 
+0000006148 00000 n 
+0000006204 00000 n 
+0000006317 00000 n 
+0000006387 00000 n 
+0000006457 00000 n 
 trailer
-<< /ID [ (basic.t         ) (basic.t         ) ] /Root 1 0 R /Size 40 >>
+<< /ID [ (basic.t         ) (basic.t         ) ] /Root 1 0 R /Size 37 >>
 startxref
-7131
+6774
 %%EOF

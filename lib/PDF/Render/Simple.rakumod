@@ -16,22 +16,23 @@ use CSS::Stylesheet;
 use PDF::Action;
 use PDF::StructElem;
 
-my subset PdfASTRoot is export(:PdfASTRoot) of Pair:D where .key ~~ 'Document' && .value.isa(List);
+my subset PdfAst is export(:PdfAst) of Pair:D where .key ~~ 'Document' && .value.isa(List);
 
 ### Attributes ###
-has PDF::API6 $.pdf .= new;
 has CSS::TagSet::TaggedPDF $.styler .= new;
-has PDF::Tags $.tags .= create: :$!pdf, :$!styler;
-has PDF::Tags::Elem $.root = $!tags.Document;
 has PDF::Content::FontObj %.font-map;
 my subset RoleMapping of Any:D where Pair|Str;
 has RoleMapping %.role-map;
 has Numeric $.width  = 612;
 has Numeric $.height = 792;
+has PDF::API6 $.pdf .= new: :$!width, :$!height;
+has PDF::Tags $.tags .= create: :$!pdf, :$!styler;
+has PDF::Tags::Elem $.root = $!tags.Document;
 has Bool $.contents = True;
 has %.index;
 has Bool $.tag = True;
 has Bool $.page-numbers;
+has Bool $.finish = True;
 has Bool $!finished;
 
 sub apply-styling(CSS::Properties:D $css, %props) {
@@ -81,8 +82,7 @@ submethod TWEAK(Str:D :$lang = 'en', :@fonts, :$stylesheet, :$page-style, *%opts
 
 method writer(PDF::Content::PageTree:D :$pages = $!pdf.Pages) {
     $pages.media-box = 0, 0, $!width, $!height;
-    my $finish = ! $!page-numbers;
-    my PDF::Render::Simple::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
+    my PDF::Render::Simple::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$!finish, :$!tag, :$!pdf, :$!contents; #, |c;
 }
 
 method !paginate(
@@ -158,23 +158,20 @@ sub categorize-alphabetically(%index) {
 
 method lang is rw { $!pdf.catalog.Lang; }
 
-my subset XMLish where .isa("LibXML::Item");
+my subset XMLish where .isa("LibXML::Elems");
 
-multi method render(::?CLASS:U: XMLish:D $xml, |c) {
-    self.new(|c).render($xml.ast);
-}
-
-multi method render(::?CLASS:U: Pair:D $xml-ast, |c) {
-    self.new(|c).render($xml-ast);
+multi method render(::?CLASS:U: $data, |c) {
+    self.new(|c).render($data);
 }
 
 multi method render(::?CLASS:D: XMLish:D $xml, |c) { self.render($xml.ast, |c) }
-multi method render(::?CLASS:D: PdfASTRoot $xml-ast, Bool :$index = True) {
+multi method render(::?CLASS:D: PdfAst $xml-ast, Bool :$index) {
     my PDF::Render::Simple::Writer $writer = self.writer;
     my Hash:D $info = $writer.write-batch($xml-ast.value, $!root);
     my %index = $writer.index;
     my @toc = $writer.toc;
     $.merge-batch: %( :@toc, :%index, :$info);
-    $.finish(:$index);
+    $.finish(:$index) if $!finish;
     $.pdf;
 }
+

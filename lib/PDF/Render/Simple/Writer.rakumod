@@ -183,7 +183,7 @@ method !table-row(@row, @widths, :@border!, Bool :$header) {
 
         for ^cols {
             my Numeric $width = @widths[$_];
-            my Pair $row = @row[$_];
+            my Pair $row = @row[$_] // next;
 
             if $row.value -> $tb is copy {
                 my $*tag = $row.key;
@@ -205,7 +205,7 @@ method !table-row(@row, @widths, :@border!, Bool :$header) {
                 }
                 if $tb.overflow -> $overflow {
                     my $text = $overflow.join;
-                    @overflow[$_] = $tb.clone: :$text, :$width, :height(0);
+                    @overflow[$_] = $row.key => $tb.clone: :$text, :$width, :height(0);
                 }
             }
             $tab += $width + @border[0];
@@ -213,7 +213,7 @@ method !table-row(@row, @widths, :@border!, Bool :$header) {
         if @overflow {
             # continue table on next page
             self!style: :lines-before(3), {
-                self!table-row(@overflow, @widths, :$header);
+                self!table-row(@overflow, @widths, :@border, :$header);
             }
         }
         else {
@@ -294,7 +294,7 @@ method !deref(@content, Str:D $tag, Bool :$consume) {
 multi method ast2pdf('Table', @content, *%atts) {
     self!style: :tag(Table), :block, :%atts, {
         my $cell-style = $*tag.root.styler.tag-style(TableData);
-        my Numeric @border = $cell-style.measure(:border-width);
+        my Numeric @border = flat $cell-style.measure(:border-width);
         @border[1] //= @border[0];
 
         my \total-width = self!gfx.canvas.width - self!indent - $!margin-right;
