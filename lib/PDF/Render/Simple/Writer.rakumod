@@ -340,6 +340,7 @@ method !make-link(Str:D $url) {
 multi method ast2pdf('Code', @content, *%atts where .<Placement> ~~ 'Block') {
     self!style: :indent, :tag(CODE), :lines-before(3), :%atts, {
         self!pad-here;
+        $!tx = $!margin-left;
         $!code-start-y //= $!ty;
         self.ast2pdf: @content;
         self!finish-code;
@@ -455,9 +456,9 @@ multi method ast2pdf('LI', @content, *%atts) {
         }
 
         $!float = $do-float;
-        temp $!indent += 1;
-
+        $!indent += 1;
         $.ast2pdf: @content;
+        self!pad-here if $!float;
     }
 }
 
